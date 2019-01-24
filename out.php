@@ -38,13 +38,20 @@ if ($method && function_exists($method)) {
 $p->delete($job);*/
 
 
-require_once 'vendor/autoload.php';
-
 use Pheanstalk\Pheanstalk;
+
+// /usr/local/Cellar/php@7.1/7.1.8_20/bin/php out.php imei
+$tubes = $argv;
+if (isset($tubes[1])) {
+	$tube = $tubes[1];
+}
 
 try {
 	$beanstalk = new Pheanstalk(QueueUtil::HOST, QueueUtil::PORT);
-	$tube = QueueUtil::QUEUE_TUBE;
+
+	if (!in_array($tube, [QueueUtil::QUEUE_TUBE, QueueUtil::QUEUE_TUBE_SMS])) {
+		$tube = QueueUtil::QUEUE_TUBE;
+	}
 
 	$beanstalk = $beanstalk->watch($tube);
 	$beanstalk = $beanstalk->ignore('default');
@@ -53,23 +60,21 @@ try {
 
 	while (1) {
 		$job = $beanstalk->reserve();
-		$_job = $job;
-		$job = array_values(QueueUtil::object_to_array($job));
-//		print_r(['------------------']);
-//		print_r($job);
-		QueueUtil::logFile($job, __FUNCTION__, __LINE__);
-		$jobId = $job[0];
+
+		$jobId = $job->getId();
+		$jobBody = json_decode($job->getData(), 1);
 		echo $jobId . PHP_EOL;
-		$jobBody = json_decode($job[1], 1);
+		QueueUtil::logFile([$jobId, $job->getData()], __FUNCTION__, __LINE__);
+
 		$method = $jobBody['consumer'];
 		$params = $jobBody['params'];
 		if (method_exists(QueueUtil::class, $method)) {
 			$result = QueueUtil::$method($params);
 			QueueUtil::logFile($method . ' result: ' . $result . PHP_EOL, __FUNCTION__, __LINE__);
-			$beanstalk->delete($_job);
+			$beanstalk->delete($job);
 		} else {
 			QueueUtil::logFile(' QueueUtil 中没找到方法 ' . $method, __FUNCTION__, __LINE__);
-			$beanstalk->delete($_job);
+			$beanstalk->delete($job);
 		}
 		sleep(1);
 	}

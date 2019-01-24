@@ -73,13 +73,12 @@ class QueueUtil
 		if (is_object($msg)) {
 			$msg = json_encode($msg, JSON_UNESCAPED_UNICODE);
 		}
-		if ($funcName) {
-			$msg = $funcName . ' ' . $line . ': ' . $msg;
-		} else {
-			$msg = 'message: ' . $msg;
-		}
+
+		$msg = $funcName . ' ' . $line . ': ' . $msg;
+		$msg = 'message: ' . $msg;
+
 		$fileName = './logs/' . 'queue_' . $tube . date('Ymd') . '.log';
-		@file_put_contents($fileName,   date('Y-m-d H:i:s') . ' ' . $msg . PHP_EOL, FILE_APPEND);
+		@file_put_contents($fileName, date('Y-m-d H:i:s') . ' ' . $msg . PHP_EOL, FILE_APPEND);
 	}
 
 	public static function addlog($params)
@@ -115,26 +114,6 @@ class QueueUtil
 		}
 		self::logFile([$phone, $formatMsg], __FUNCTION__, __LINE__);
 		return true;
-	}
-
-	/**
-	 * 对象 转 数组
-	 * @param object $obj 对象
-	 * @return array
-	 */
-	public static function object_to_array($obj)
-	{
-		$obj = (array)$obj;
-		foreach ($obj as $k => $v) {
-			if (gettype($v) == 'resource') {
-				return;
-			}
-			if (gettype($v) == 'object' || gettype($v) == 'array') {
-				$obj[$k] = (array)self::object_to_array($v);
-			}
-		}
-
-		return $obj;
 	}
 
 }

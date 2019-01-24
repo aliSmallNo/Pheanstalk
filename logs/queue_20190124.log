@@ -1,29 +1,30 @@
-2019-01-24 10:54:58 message: beanstalk connected 
-2019-01-24 10:54:58 message: [8,"{\"consumer\":\"addlog\",\"params\":{\"data\":\"1~~~~~~~~~~~~\"}}"]
-2019-01-24 10:54:58 addlog 87: {"data":"1~~~~~~~~~~~~"}
-2019-01-24 10:54:58 message: addlog result: 
+2019-01-24 11:58:01 message:  58: beanstalk connected 
+2019-01-24 11:58:01 message:  66: [29,"{\"consumer\":\"addlog\",\"params\":{\"data\":\"1~~~~~~~~~~~~\"}}"]
+2019-01-24 11:58:01 message: addlog 86: {"data":"1~~~~~~~~~~~~"}
+2019-01-24 11:58:01 message:  72: addlog result: 
 
-2019-01-24 10:54:59 message: [9,"{\"consumer\":\"addlog\",\"params\":{\"data\":\"2~~~~~~~~~~~~\"}}"]
-2019-01-24 10:54:59 addlog 87: {"data":"2~~~~~~~~~~~~"}
-2019-01-24 10:54:59 message: addlog result: 
+2019-01-24 11:58:02 message:  66: [30,"{\"consumer\":\"addlog\",\"params\":{\"data\":\"2~~~~~~~~~~~~\"}}"]
+2019-01-24 11:58:02 message: addlog 86: {"data":"2~~~~~~~~~~~~"}
+2019-01-24 11:58:02 message:  72: addlog result: 
 
-2019-01-24 10:55:00 message: [10,"{\"consumer\":\"addlog\",\"params\":{\"data\":\"3~~~~~~~~~~~~\"}}"]
-2019-01-24 10:55:00 addlog 87: {"data":"3~~~~~~~~~~~~"}
-2019-01-24 10:55:00 message: addlog result: 
+2019-01-24 11:58:03 message:  66: [31,"{\"consumer\":\"addlog\",\"params\":{\"data\":\"3~~~~~~~~~~~~\"}}"]
+2019-01-24 11:58:03 message: addlog 86: {"data":"3~~~~~~~~~~~~"}
+2019-01-24 11:58:03 message:  72: addlog result: 
 
-2019-01-24 10:55:01 message: [11,"{\"consumer\":\"sendSMS\",\"params\":{\"phone\":17611629667,\"msg\":\"msg~~~~~\"}}"]
-2019-01-24 10:55:01 smsMessage 116: [17611629667,"【千寻恋恋】msg~~~~~"]
-2019-01-24 10:55:01 message: sendSMS result: 1
+2019-01-24 11:58:04 message:  66: [32,"{\"consumer\":\"sendSMS\",\"params\":{\"phone\":17611629667,\"msg\":\"msg~~~~~\"}}"]
+2019-01-24 11:58:04 message: smsMessage 115: [17611629667,"【千寻恋恋】msg~~~~~"]
+2019-01-24 11:58:04 message:  72: sendSMS result: 1
 
-2019-01-24 10:55:02 message: [12,"{\"consumer\":\"addlog\",\"params\":{\"data\":\"4~~~~~~~~~~~~\"}}"]
-2019-01-24 10:55:02 addlog 87: {"data":"4~~~~~~~~~~~~"}
-2019-01-24 10:55:02 message: addlog result: 
+2019-01-24 11:58:05 message:  66: [33,"{\"consumer\":\"addlog\",\"params\":{\"data\":\"4~~~~~~~~~~~~\"}}"]
+2019-01-24 11:58:05 message: addlog 86: {"data":"4~~~~~~~~~~~~"}
+2019-01-24 11:58:05 message:  72: addlog result: 
 
-2019-01-24 10:55:03 message: [13,"{\"consumer\":\"addlog\",\"params\":{\"data\":\"5~~~~~~~~~~~~\"}}"]
-2019-01-24 10:55:03 addlog 87: {"data":"5~~~~~~~~~~~~"}
-2019-01-24 10:55:03 message: addlog result: 
+2019-01-24 11:58:06 message:  66: [34,"{\"consumer\":\"addlog\",\"params\":{\"data\":\"5~~~~~~~~~~~~\"}}"]
+2019-01-24 11:58:06 message: addlog 86: {"data":"5~~~~~~~~~~~~"}
+2019-01-24 11:58:06 message:  72: addlog result: 
 
-2019-01-24 10:55:04 message: [14,"{\"consumer\":\"addlog\",\"params\":{\"data\":\"6~~~~~~~~~~~~\"}}"]
-2019-01-24 10:55:04 addlog 87: {"data":"6~~~~~~~~~~~~"}
-2019-01-24 10:55:04 message: addlog result: 
+2019-01-24 11:58:07 message:  66: [35,"{\"consumer\":\"addlog\",\"params\":{\"data\":\"6~~~~~~~~~~~~\"}}"]
+2019-01-24 11:58:07 message: addlog 86: {"data":"6~~~~~~~~~~~~"}
+2019-01-24 11:58:07 message:  72: addlog result: 
 
+2019-01-24 12:00:09 message:  83: Socket timed out!

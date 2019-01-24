@@ -1,7 +1,7 @@
-2019-01-24 10:54:56 loadJob 61: {"consumer":"addlog","params":{"data":"1~~~~~~~~~~~~"}}
-2019-01-24 10:54:56 loadJob 61: {"consumer":"addlog","params":{"data":"2~~~~~~~~~~~~"}}
-2019-01-24 10:54:56 loadJob 61: {"consumer":"addlog","params":{"data":"3~~~~~~~~~~~~"}}
-2019-01-24 10:54:56 loadJob 61: {"consumer":"sendSMS","params":{"phone":17611629667,"msg":"msg~~~~~"}}
-2019-01-24 10:54:56 loadJob 61: {"consumer":"addlog","params":{"data":"4~~~~~~~~~~~~"}}
-2019-01-24 10:54:56 loadJob 61: {"consumer":"addlog","params":{"data":"5~~~~~~~~~~~~"}}
-2019-01-24 10:54:56 loadJob 61: {"consumer":"addlog","params":{"data":"6~~~~~~~~~~~~"}}
+2019-01-24 11:57:59 message: loadJob 61: {"consumer":"addlog","params":{"data":"1~~~~~~~~~~~~"}}
+2019-01-24 11:57:59 message: loadJob 61: {"consumer":"addlog","params":{"data":"2~~~~~~~~~~~~"}}
+2019-01-24 11:57:59 message: loadJob 61: {"consumer":"addlog","params":{"data":"3~~~~~~~~~~~~"}}
+2019-01-24 11:57:59 message: loadJob 61: {"consumer":"sendSMS","params":{"phone":17611629667,"msg":"msg~~~~~"}}
+2019-01-24 11:57:59 message: loadJob 61: {"consumer":"addlog","params":{"data":"4~~~~~~~~~~~~"}}
+2019-01-24 11:57:59 message: loadJob 61: {"consumer":"addlog","params":{"data":"5~~~~~~~~~~~~"}}
+2019-01-24 11:57:59 message: loadJob 61: {"consumer":"addlog","params":{"data":"6~~~~~~~~~~~~"}}
