@@ -1,43 +1,11 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: b_tt
+ * User: zhoupan
  * Date: 19/1/23
  * Time: 16:52
  */
 require_once 'QueueUtil.php';
-
-/*require_once 'vendor/autoload.php';
-
-use Pheanstalk\Pheanstalk;
-
-//创建一个Pheanstalk对象
-$p = new Pheanstalk('127.0.0.1', 11301);
-
-//监听userReg管道，忽略default管道
-$job = $p->watch('userReg')->ignore('default')->reserve();
-
-$data = json_decode($job->getData(), 1);
-//打印任务中的数据
-print_r($data);
-
-function out($params)
-{
-	print_r($params);
-}
-
-$method = isset($data['method']) ? $data['method'] : '';
-
-echo '$method：' . $method . PHP_EOL;
-
-if ($method && function_exists($method)) {
-	$method($data['params']);
-}
-
-//最后删除任务，表示任务处理完成
-$p->delete($job);*/
-
-
 use Pheanstalk\Pheanstalk;
 
 // /usr/local/Cellar/php@7.1/7.1.8_20/bin/php out.php imei

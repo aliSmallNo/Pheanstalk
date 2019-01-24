@@ -15,6 +15,7 @@ $p = new Pheanstalk('127.0.0.1', 11301);
 
 print_r($p->listTubes());
 exit;
+
 //查看beanstalkd当前的状态信息
 echo "查看beanstalkd当前的状态信息" . PHP_EOL;
 print_r($p->stats());

@@ -35,7 +35,7 @@
 	make
 	
 #####    运行
-	./beanstalkd -l 10.0.1.5 -p 11300
+	./beanstalkd -l 127.0.0.1 -p 11301
 	-l 指定ip
 	-p 指定端口
     		
@@ -63,7 +63,7 @@
 	<?php
 	require_once 'vendor/autoload.php';
 	use Pheanstalk\Pheanstalk;
-	$p = new Pheanstalk('192.168.241.129', 11300);
+	$p = new Pheanstalk('127.0.0.1', 11301);
 	//查看beanstalkd当前的状态信息
 	var_dump($p->stats());
     
@@ -99,7 +99,7 @@
 	use Pheanstalk\Pheanstalk;
 	
 	//创建一个Pheanstalk对象
-	$p = new Pheanstalk('192.168.241.129', 11300);
+	$p = new Pheanstalk('127.0.0.1', 11301);
 	
 	$data = array(
 			'id' => 1,
@@ -126,7 +126,7 @@
 	use Pheanstalk\Pheanstalk;
 	
 	//创建一个Pheanstalk对象
-	$p = new Pheanstalk('192.168.241.129', 11300);
+	$p = new Pheanstalk('127.0.0.1', 11301);
 	
 	//监听userReg管道，忽略default管道
 	$job = $p->watch('userReg')->ignore('default')->reserve();
