@@ -16,12 +16,6 @@ class QueueUtil
 	const QUEUE_TUBE = 'imei';
 	const QUEUE_TUBE_SMS = 'sms_imei';
 
-	public static $QueueConfig = [
-		'persistent' => false,
-		'host' => '127.0.0.1',
-		'port' => 11302,
-		'timeout' => 3000
-	];
 	const HOST = '127.0.0.1';
 	const PORT = 11301;
 
@@ -43,7 +37,7 @@ class QueueUtil
 				'consumer' => $methodName,
 				'params' => $params
 			];
-			//向userReg管道中添加任务，返回任务ID
+			//向管道中添加任务，返回任务ID
 			//put()方法有四个参数
 			//第一个任务的数据
 			//第二个任务的优先级，值越小，越先处理
